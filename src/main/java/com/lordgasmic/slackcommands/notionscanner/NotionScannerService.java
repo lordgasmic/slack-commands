@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 public class NotionScannerService {
 
     public Object notionScanner() {
-        return null;
+        SlackResponse data = new SlackResponse();
+        data.setName("potato");
+        return data;
     }
 }
