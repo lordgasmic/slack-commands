@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class NotionScannerController {
 
-    @GetMapping("/api/v1/slack/notion-scanner")
+    @GetMapping("/api/v1/slack-commands/notion-scanner")
     public Object notionScanner() {
-        return null;
+        return "potato";
     }
 }
