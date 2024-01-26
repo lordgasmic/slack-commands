@@ -13,6 +13,7 @@ public class NotionScannerConfiguration {
         loggingFilter.setIncludeClientInfo(true);
         loggingFilter.setIncludeQueryString(true);
         loggingFilter.setIncludePayload(true);
+        loggingFilter.setIncludeHeaders(true);
         return loggingFilter;
     }
 }
