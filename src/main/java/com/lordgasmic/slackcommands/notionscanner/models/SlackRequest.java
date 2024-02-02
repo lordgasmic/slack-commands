@@ -1,4 +1,4 @@
-package com.lordgasmic.slackcommands.notionscanner;
+package com.lordgasmic.slackcommands.notionscanner.models;
 
 import lombok.Data;
 
