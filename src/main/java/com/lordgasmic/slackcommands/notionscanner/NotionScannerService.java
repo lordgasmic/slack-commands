@@ -49,7 +49,7 @@ public class NotionScannerService {
         HttpRequest request = HttpRequest.newBuilder()
                                          .uri(URI.create(NOTION_SEARCH_API))
                                          .POST(HttpRequest.BodyPublishers.ofString(requestBody))
-                                         .header("Authorization", "Bearer: " + notionIntegration)
+                                         .header("Authorization", "Bearer " + notionIntegration)
                                          .header("Notion-Version", "2022-06-28")
                                          .header("Content-Type", "application/json")
                                          .build();
