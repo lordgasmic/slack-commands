@@ -8,6 +8,7 @@ import com.lordgasmic.slackcommands.notionscanner.models.NotionPageTitleObject;
 import com.lordgasmic.slackcommands.notionscanner.models.NotionSearchRequest;
 import com.lordgasmic.slackcommands.notionscanner.models.NotionSearchResponse;
 import com.lordgasmic.slackcommands.notionscanner.models.SlackRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Slf4j
 public class NotionScannerService {
 
     private static final String NOTION_SEARCH_API = "https://api.notion.com/v1/search";
@@ -41,6 +43,8 @@ public class NotionScannerService {
         String requestBody = objectMapper
                 .writerWithDefaultPrettyPrinter()
                 .writeValueAsString(searchRequest);
+
+        log.info("notion token: " + notionIntegration);
 
         HttpRequest request = HttpRequest.newBuilder()
                                          .uri(URI.create(NOTION_SEARCH_API))
